@@ -112,15 +112,7 @@ let nome = 'Raphael';
 let email = 'raphael@gmail.com';
 let idade = 20;
 
-if (
-  nome != null &&
-  email != null &&
-  idade != null &&
-  idade > 0 &&
-  nome !== '' &&
-  email !== '' &&
-  idade !== ''
-) {
+if (nome !== '' && email.includes('@') && idade > 0) {
   console.log('Formulário enviado com sucesso');
 } else {
   console.log('Ta faltando coisa ae');
