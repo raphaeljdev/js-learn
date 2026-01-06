@@ -38,18 +38,76 @@ console.log('contagem finalizada\n');
 
 // 5. Receber números até digitar 0
 // Use do...while para simular a entrada de números. O programa deve continuar até que o usuário digite 0. Ao final, mostre quantos números foram digitados.
+let numerosDigitados = [2, 4, 5, 6, 0];
+let indiceEscolhido = 0;
+let numero;
+
+do {
+  numero = numerosDigitados[indiceEscolhido];
+  console.log(numero);
+  indiceEscolhido++;
+} while (numero !== 0);
 
 // 6. Jogo do número secreto
 // Defina uma variável numeroSecreto com o valor 7. O usuário tem 3 tentativas para acertar (simule essas tentativas com variáveis). Mostre mensagens de "Acertou!" ou "Tente novamente".
 
+let numeroSecreto = 7;
+let numeroChutado = [4, 7, 6];
+for (let i = 0; i < 3; i++) {
+  if (numeroChutado[i] === numeroSecreto) {
+    console.log('Acertou');
+    break;
+  } else {
+    console.log('Errou');
+  }
+}
+
 // 7. Idade ao longo dos anos
 // Crie uma variável anoNascimento e anoAtual. Use um for para listar a idade da pessoa ano a ano até o ano atual.
+
+let anoNascimento = 2004;
+let anoAtual = 2026;
+let contadorDeIdade = 0;
+
+for (let i = anoNascimento; i <= anoAtual; i++) {
+  console.log(`${i} = ${contadorDeIdade}`);
+  contadorDeIdade++;
+}
 
 // 8. Listando números pares
 // Mostre todos os números pares entre 1 e 50 usando for.
 
+let numeroPar = 0;
+
+for (let i = 0; i < 50; i++) {
+  numeroPar % 2 == 0 ? console.log(numeroPar) : console.log('pulando...');
+  numeroPar++;
+}
+
 // 9. Contar múltiplos de 3 entre 1 e 100
 // Mostre no console quantos números entre 1 e 100 são divisíveis por 3.
 
+for (let multiplosDeTres = 1; multiplosDeTres <= 100; multiplosDeTres++) {
+  multiplosDeTres % 3 == 0
+    ? console.log(multiplosDeTres)
+    : console.log('pulando...');
+}
+
 // 10. Menu com repetição
 // Crie um menu simples que exibe opções como "1 - Ver saldo", "2 - Fazer depósito", "3 - Sair". Use do...while para repetir o menu até o usuário escolher sair.
+
+let opcoes = [1, 2, 3];
+let indice = 0;
+let opcao;
+
+do {
+  opcao = opcoes[indice];
+  if (opcao == 1) {
+    console.log('Ver saldo');
+  } else if (opcao == 2) {
+    console.log('Fazer deposito');
+  } else if (opcao == 3) {
+    console.log('Sair');
+  }
+  indice++;
+} while (opcao !== 3);
