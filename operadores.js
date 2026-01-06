@@ -1,12 +1,19 @@
 // 1. Verificação de maioridade
 // Crie uma variável idade e verifique se a pessoa é maior de idade (18 anos ou mais). Mostre no console uma mensagem adequada.
 
-let idade = 20;
-if (idade >= 18) {
-  console.log(`Idade: ${idade}. Maior de idade.`);
-} else {
-  console.log(`Idade: ${idade}. Menor de idade.`);
-}
+const readline = require('readline');
+
+const leitor = readline.createInterface({
+  input: process.stdin,
+  output: process.stdout,
+});
+
+leitor.question('qual eh a sua idade?', (idade) => {
+  idade > 18
+    ? console.log('eh maior de idade')
+    : console.log('eh menor de idade');
+  leitor.close();
+});
 
 // 2. Situação do aluno
 // Crie duas variáveis com notas de um aluno. Calcule a média. Se for maior ou igual a 7, mostre "Aprovado". Caso contrário, mostre "Reprovado".
